@@ -162,8 +162,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intentBambu = getPackageManager().getLaunchIntentForPackage("bbl.intl.bambulab.com");
         Intent intentMain = getPackageManager().getLaunchIntentForPackage("in.insideandroid.textrecognizer");
 
-        PendingIntent pendingIntentBambu = PendingIntent.getActivity(MainActivity.this,0,intentBambu,0);
-        PendingIntent pendingIntentMain = PendingIntent.getActivity(MainActivity.this,0,intentMain,0);
+        PendingIntent pendingIntentBambu = PendingIntent.getActivity(MainActivity.this,0,intentBambu, PendingIntent.FLAG_IMMUTABLE);
+        PendingIntent pendingIntentMain = PendingIntent.getActivity(MainActivity.this,0,intentMain, PendingIntent.FLAG_IMMUTABLE);
 
         try{
             pendingIntentBambu.send();
